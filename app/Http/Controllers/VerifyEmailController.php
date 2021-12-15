@@ -20,6 +20,6 @@ class VerifyEmailController extends Controller
         if ($user->markEmailAsVerified()) {
             event(new Verified($user));
         }
-            return response()->json(['message' => 'email verify thành công' ]);
+        return redirect('http://localhost:3001/signin');
     }
 }

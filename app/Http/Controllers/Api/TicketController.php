@@ -148,12 +148,17 @@ class TicketController extends Controller
         // $ticket->update($request->all());
         // return $ticket;
     }
+
+    // lọc theo ngày
+    public function loc_ngay(Request $reques)
+    {
+        return $get = Statistical::orderBy('ticket_date')->wheredate('ticket_date',$reques->today)->get();
+    }
 // lọc theo khoảng thời gian từ .... đến....
     public function loc_khoang_tgian(Request $request){
         $date_from = $request->date_from;
         $date_to = $request->date_to;
         return $get = statistical::whereBetween('ticket_date',[$date_from,$date_to])->orderBy('ticket_date','ASC')->get();
-
 
     }
     // lọc theo mốc tgian  7 ngày qua, tháng này, tháng trước, 1 năm vừa qua

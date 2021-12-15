@@ -29,42 +29,50 @@ class DatabaseSeeder extends Seeder
 
     public function UserAndRole(){
         $userAdmin = User::create([
-                'name' => 'admin',
-                'email' => 'admin@gmail.com',
-                'email_verified_at' => '2021-12-07T16:21:42.000000Z',
-                'phone_number' => '0384056544',
-                'password' => bcrypt('123456'),
-                "image" => 'img.jpg',
-                "gender" => 'nam',
-                'created_at' => now(),
-                'updated_at' => now()
+            'name' => 'admin',
+            'email' => 'admin@gmail.com',
+            'email_verified_at' => '2021-12-07T16:21:42.000000Z',
+            'phone_number' => '0384056544',
+            'password' => bcrypt('123456'),
+            "image" => 'img.jpg',
+            "gender" => 'nam',
+            'created_at' => now(),
+            'updated_at' => now()
         ]);
         $userStaff = User::create([
-                'name' => 'Nhân viên phụ trách',
-                'email' => 'staff@gmail.com',
-                'email_verified_at' => '2021-12-07T16:21:42.000000Z',
-                'phone_number' => '01692582890',
-                'password' => bcrypt('123456'),
-                "image" => 'img.jpg',
-                "gender" => 'nam',
-                'created_at' => now(),
-                'updated_at' => now()
+            'name' => 'Nhân viên phụ trách',
+            'email' => 'staff@gmail.com',
+            'email_verified_at' => '2021-12-07T16:21:42.000000Z',
+            'phone_number' => '01692582890',
+            'password' => bcrypt('123456'),
+            "image" => 'img.jpg',
+            "gender" => 'nam',
+            'created_at' => now(),
+            'updated_at' => now()
         ]);
-
+        $userNvTicket = User::create([
+            'name' => 'Nhân viên soát vé',
+            'email' => 'nvticket@gmail.com',
+            'email_verified_at' => '2021-12-07T16:21:42.000000Z',
+            'phone_number' => '0932459999',
+            'password' => bcrypt('123456'),
+            "image" => 'img.jpg',
+            "gender" => 'nam',
+            'created_at' => now(),
+            'updated_at' => now()
+         ]);
         $roleADmin = Roles::create([
-
-                'name'        => 'admin',
-                'display_name'=>'Quản trị viên'
-
+            'name'        => 'admin',
+            'display_name'=>'Quản trị viên'
         ]);
         $roleStaff = Roles::create([
-
-                'name'        => 'Nhân viên',
-                'display_name'=>'Nhân viên'
-
-
+            'name'        => 'Nhân viên',
+            'display_name'=>'Nhân viên'
         ]);
-
+        $roleNvTicket = Roles::create([
+            'name'        => 'Nhân viên soát vé',
+            'display_name'=>'Nhân viên soát vé'
+        ]);
 
 
 

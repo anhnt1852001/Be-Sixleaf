@@ -86,8 +86,10 @@ Route::post('/email/verify/resend', function (Request $request) {
 //đổi mật khẩu, quên mật khẩu
 Route::post('password/email',[ForgotPasswordController::class, 'forgot']);
 Route::post('password/reset', [ForgotPasswordController::class,'reset']);
+Route::get('change',[ForgotPasswordController::class,'change']);
+Route::post('change',[ForgotPasswordController::class,'change']);
 
-
+Route::post('loc_ngay', [TicketController::class , 'loc_ngay']);
 Route::post('loc_ve', [TicketController::class , 'loc_khoang_tgian']);
 Route::post('loc_ve_thang', [TicketController::class , 'loc_theo_thang']);
 Route::get('loc_mac_dinh', [TicketController::class , 'loc_default']);

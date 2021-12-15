@@ -25,7 +25,6 @@ class BusesController extends Controller
     public function index()
     {
         $list_sv = Buses::with('Service','rating')->get();//thêm rating vào with()
-
         return $list_sv;
     }
 

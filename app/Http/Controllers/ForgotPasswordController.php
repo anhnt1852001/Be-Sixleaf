@@ -34,6 +34,24 @@ class ForgotPasswordController extends Controller
             return response()->json(["msg" => "Invalid token provided"], 400);
         }
 
-        return response()->json(["msg" => "Password has been successfully changed"]);
+        return redirect('http://localhost:3001/signin');
+    }
+
+    public function change(Request $request)
+    {
+        $id = $request->id;
+        $user = User::where('id', $id)->first();
+        $this->validate($request, [
+            'password' => 'required',
+            'new_password' => 'max:8|different:password',
+        ]);
+        if (Hash::check($request->password, $user->password)) {
+            $user->fill([
+                'password' => Hash::make($request->new_password)
+            ])->save();
+            return response()->json('Mật khẩu của bạn đã được đổi');
+        } else {
+            return response()->json('Mật khẩu của bạn không đúng');
+        }
     }
 }

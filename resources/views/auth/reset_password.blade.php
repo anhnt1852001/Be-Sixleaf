@@ -67,10 +67,10 @@
     <form class="form-container" action="api/password/reset" method="POST">
         <h2>Forgot Password?</h2>
         <input name="email" placeholder="Enter email" value="{{request()->get('email')}}">
-        <input name="password" placeholder="Enter new password">
-        <input name="password_confirmation" placeholder="Confirm new password">
+        <input type="password" name="password" placeholder="Enter new password">
+        <input type="password" name="password_confirmation" placeholder="Confirm new password">
         <input hidden name="token" placeholder="token" value="{{request()->get('token')}}">
-        <button type="submit">Submit</button>
+        <button type="submit">Forgot password</button>
     </form>
 </div>
 </body>
