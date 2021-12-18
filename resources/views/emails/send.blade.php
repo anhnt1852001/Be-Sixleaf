@@ -6,8 +6,8 @@ Dear {{$email->email}},
 <div>Mã vé của bạn là : {{$email->ticket_code}}<br></div>
 <div>Người đặt : {{$email->customer_name}}<br></div>
 <div>Ngày khởi hành :{{\Carbon\Carbon::parse($buse->date_active)->format('d/m/Y')}} <br></div>
-<div>Bắt đầu : {{$buse->startDistrict_name}}, {{$buse->startWard_name}}, {{$buse->startPointName}}<br></div>
-<div>Điểm đến :  {{$buse->endDistrict_name}}, {{$buse->endWard_name}}, {{$buse->endPointName}}<br></div>
+<div>Bắt đầu : {{$buse->detailAddressStart}}, {{$buse->startDistrict_name}}, {{$buse->startWard_name}}, {{$buse->startPointName}}<br></div>
+<div>Điểm đến : {{$buse->detailAddressEnd}}, {{$buse->endDistrict_name}}, {{$buse->endWard_name}}, {{$buse->endPointName}}<br></div>
 <div>Thời gian : {{\Carbon\Carbon::parse($buse->start_time)->format('d/m/Y')}}<br></div>
 <div>Giá : {{number_format($email->totalPrice)}}<br></div>
 <div>Hình thức thanh toán : {{$email->paymentMethod}}<br></div>
