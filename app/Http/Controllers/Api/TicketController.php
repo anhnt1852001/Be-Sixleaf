@@ -10,6 +10,9 @@ use App\Models\Ticket;
 use App\Models\Buses_tickes;
 use App\Models\statistical;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Notification;
+use App\Notifications\TicketNotification;
+
 
 class TicketController extends Controller
 {
@@ -65,7 +68,7 @@ class TicketController extends Controller
      */
     public function store(Request $request)
     {
-         $date_ticket = Carbon::now('Asia/Ho_Chi_Minh')->format('Y-m-d');
+        $date_ticket = Carbon::now('Asia/Ho_Chi_Minh')->format('Y-m-d');
         $data = [
             'ticket_code' => 'SL' .rand(1000,9999),
             'buses_id' => $request->buses_id,
@@ -81,6 +84,8 @@ class TicketController extends Controller
             'description' => $request->description,
             'date_ticket'=> $date_ticket
         ];
+        $user = User::find(1);
+        Notification::send($user,new TicketNotification($data));
         return Ticket::create($data);
     }
 

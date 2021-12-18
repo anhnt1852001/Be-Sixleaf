@@ -25,7 +25,7 @@ Dear {{$email->email}},
 <div>Ghi chú : {{$email->description}}<br></div>
 <div>Số ghế : {{$email->quantity}}<br></div>
 
-<div>** Đến trước khi xe chạy trước 30' - 1h</div>
+<div>** Quý khách xin vui lòng đến trước 15-30 phút !!!</div>
 
 Thanks,<br>
 {{ config('app.name') }}

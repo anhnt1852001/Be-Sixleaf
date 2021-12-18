@@ -21,6 +21,8 @@ use App\Http\Controllers\VerifyEmailController;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use App\Http\Controllers\ResetPasswordController;
 use App\Http\Controllers\ForgotPasswordController;
+use App\Http\Controllers\NotificationController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -93,3 +95,13 @@ Route::post('loc_ngay', [TicketController::class , 'loc_ngay']);
 Route::post('loc_ve', [TicketController::class , 'loc_khoang_tgian']);
 Route::post('loc_ve_thang', [TicketController::class , 'loc_theo_thang']);
 Route::get('loc_mac_dinh', [TicketController::class , 'loc_default']);
+
+
+// >>> Xem tất cả các thông báo chưa đọc
+Route::get('notification', [NotificationController::class,'index']);
+
+// >>> Đánh dấu 1 thông báo là đã đọc
+Route::get('readed/{id}', [NotificationController::class,'readed']);
+
+// >>> Đánh dấu tất cả thông báo đã đọc
+Route::get('readedall', [NotificationController::class,'readedall']);

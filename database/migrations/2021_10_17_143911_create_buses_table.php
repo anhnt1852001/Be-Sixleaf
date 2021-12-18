@@ -35,7 +35,7 @@ class CreateBusesTable extends Migration
             $table->string('detailAddressStart');
             $table->string('detailAddressEnd');
             $table->integer('seat_empty');
-            $table->date('date_active');
+            $table->date('date_active')->nullable();
             $table->date('date_inactive')->nullable();
             $table->string('start_time');
             $table->string('range_time');

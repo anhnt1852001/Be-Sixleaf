@@ -30,8 +30,7 @@ class DatabaseSeeder extends Seeder
     public function UserAndRole(){
         $userAdmin = User::create([
             'name' => 'admin',
-            'email' => 'admin@gmail.com',
-            'email_verified_at' => '2021-12-07T16:21:42.000000Z',
+            'email' => 'lequyet840500@gmail.com',
             'phone_number' => '0384056544',
             'password' => bcrypt('123456'),
             "image" => 'img.jpg',
@@ -42,7 +41,7 @@ class DatabaseSeeder extends Seeder
         $userStaff = User::create([
             'name' => 'Nhân viên phụ trách',
             'email' => 'staff@gmail.com',
-            'email_verified_at' => '2021-12-07T16:21:42.000000Z',
+            'email_verified_at' => '2021-12-17 16:28:33',
             'phone_number' => '01692582890',
             'password' => bcrypt('123456'),
             "image" => 'img.jpg',
@@ -53,7 +52,7 @@ class DatabaseSeeder extends Seeder
         $userNvTicket = User::create([
             'name' => 'Nhân viên soát vé',
             'email' => 'nvticket@gmail.com',
-            'email_verified_at' => '2021-12-07T16:21:42.000000Z',
+            'email_verified_at' => '2021-12-17 16:28:33',
             'phone_number' => '0932459999',
             'password' => bcrypt('123456'),
             "image" => 'img.jpg',
