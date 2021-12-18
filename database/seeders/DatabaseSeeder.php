@@ -31,6 +31,7 @@ class DatabaseSeeder extends Seeder
         $userAdmin = User::create([
             'name' => 'admin',
             'email' => 'lequyet840500@gmail.com',
+            'email_verified_at' => '2021-12-17 16:28:33',
             'phone_number' => '0384056544',
             'password' => bcrypt('123456'),
             "image" => 'img.jpg',
