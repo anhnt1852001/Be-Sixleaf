@@ -78,7 +78,6 @@ class TicketController extends Controller
             'phone_number' => $request->phone_number,
             'quantity' => $request->quantity,
             'identity_card' => $request->identity_card,
-            'status' => $request->status,
             'paymentMethod' => $request->paymentMethod,
             'totalPrice' => $request->totalPrice,
             'depositAmount' => $request->depositAmount,
