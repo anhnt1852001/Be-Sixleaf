@@ -81,6 +81,8 @@ class TicketController extends Controller
             'status' => $request->status,
             'paymentMethod' => $request->paymentMethod,
             'totalPrice' => $request->totalPrice,
+            'depositAmount' => $request->depositAmount,
+            'reservationTime' => $request->reservationTime,
             'description' => $request->description,
             'date_ticket'=> $date_ticket
         ];
