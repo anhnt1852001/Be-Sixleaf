@@ -23,7 +23,7 @@ class CreateTicketsTable extends Migration
             $table->string('phone_number');
             $table->integer('quantity')->default(1);
             $table->string('identity_card');
-            $table->string('status')->default('WAITING_ACTIVE');
+            $table->string('status')->default('WAITING_ACTIVED');
             $table->string('paymentMethod')->default('OFFLINE');
             $table->integer('totalPrice')->default(0);
             $table->integer('depositAmount')->nullable();
