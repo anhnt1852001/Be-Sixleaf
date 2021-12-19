@@ -13,7 +13,7 @@ Dear {{$email->email}},
 <div>Hình thức thanh toán : {{$email->paymentMethod}}<br></div>
 @if ($email->status == 'DONE')
 <div>Tình trạng thanh toán: Đã Hoàn Thành<br></div>
-@elseif ($email->status == 'WAITING_ACTIVED')
+@elseif ($email->status == 'WAITING_ACTIVE')
 <div>Tình trạng thanh toán: Chưa Thanh Toán<br></div>
 @elseif ($email->status == 'ACTIVED')
 <div>Tình trạng thanh toán: Đã Thanh Toán<br></div>
