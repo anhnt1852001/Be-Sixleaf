@@ -45,7 +45,7 @@ class TicketController extends Controller
         // // ->paginate(5)
         // // ->orderBy('id_ticket', 'asc')
         // ->with('Buses')->get();
-        $list_tk = Ticket::with('Buses')->get();
+        $list_tk = Ticket::with('Buses')->orderBy('created_at','DESC')->get();
         return $list_tk;
 
     }
