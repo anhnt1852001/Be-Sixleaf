@@ -47,7 +47,6 @@ class TicketController extends Controller
         // ->with('Buses')->get();
         $list_tk = Ticket::with('Buses')->orderBy('created_at','DESC')->get();
         return $list_tk;
-
     }
 
     /**

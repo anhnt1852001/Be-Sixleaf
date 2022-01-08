@@ -103,9 +103,9 @@ class PaymentController extends Controller
                 'time' => date('Y-m-d H:i:s' , strtotime($vnpaydata['vnp_PayDate'])),
             ];
             Payment::insert($dataPayment);
-            return redirect('http://localhost:3001/payment/success');
+            return redirect('https://fpoly-ticket-app.netlify.app/payment/success');
         } else {
-            return redirect('http://localhost:3001/payment/fail');
+            return redirect('https://fpoly-ticket-app.netlify.app/payment/fail');
         }
     }
 
